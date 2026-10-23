@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b2342">
-  <meta name="description" content="SkillProof AI helps clients discover talent and freelancers show what they can do through portfolios, projects, and practical skill challenges.">
+  <meta name="description" content="SkillProof AI helps clients discover talent and freelancers practise skills through interactive starter challenges, portfolios, and an AI assistant preview.">
   <title>SkillProof AI — Skills You Can Prove</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +27,19 @@
     @media(max-width:900px){.navlinks{gap:16px}.hero-grid{grid-template-columns:1fr .8fr;gap:20px}.visual-photo{width:90%}.why-grid{gap:34px}.challenge-panel{padding:36px}.hero{min-height:550px}}
     @media(max-width:740px){.container{width:min(100% - 30px,560px)}.nav{min-height:69px}.brand{font-size:1rem}.brand-mark{width:38px;height:38px}.nav-actions>.btn{display:none}.menu-toggle{display:grid;place-items:center}.navlinks{display:none;position:absolute;top:69px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:17px 22px 22px;box-shadow:0 18px 30px #142f4b16;align-items:stretch;gap:0}.navlinks.open{display:flex;flex-direction:column}.navlinks a{padding:12px 0;border-bottom:1px solid #edf1f6}.navlinks a:last-child{border:0}.hero-grid{grid-template-columns:1fr;padding:68px 0 45px;gap:16px}.hero{min-height:auto}.hero-copy{font-size:1rem}.hero-visual{min-height:290px;width:100%;max-width:430px;margin:0 auto}.visual-photo{width:82%;height:245px;right:3%;top:10px}.proof-card{bottom:3px;left:2%;padding:14px}.trust-inner{gap:15px 23px;padding:20px 0}.trust-item{font-size:.79rem}.section{padding:67px 0}.section-head{margin-bottom:30px}.skill-grid{grid-template-columns:1fr;gap:16px}.skill-image{height:205px}.skill-body{padding:18px}.why-grid{grid-template-columns:1fr;gap:32px}.why-image{min-height:320px}.steps{grid-template-columns:1fr;gap:14px}.step{padding:22px}.challenge{padding:0 0 65px}.challenge-panel{grid-template-columns:1fr;padding:30px 24px;gap:22px}.challenge-panel .btn{justify-self:start}.join{padding:60px 0}.footer-top{flex-direction:column}.footer-links{gap:15px 20px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+    /* Skill Check Lab and AI Coach additions */
+    .lab-section{background:linear-gradient(180deg,#f5f8fc 0%,#fff 100%)}
+    .lab-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:28px;align-items:stretch}
+    .lab-intro{border-radius:24px;padding:30px;background:linear-gradient(145deg,#0b2342,#14558c);color:#fff;position:relative;overflow:hidden}
+    .lab-intro:after{content:"";position:absolute;width:220px;height:220px;right:-95px;bottom:-100px;border-radius:50%;background:#37d5d8;opacity:.18;filter:blur(18px)}
+    .lab-intro h3{font-size:1.55rem;margin-bottom:13px}.lab-intro p{color:#d6e8f8;font-size:.96rem}.lab-points{display:grid;gap:13px;margin-top:25px;position:relative;z-index:1}.lab-point{display:flex;gap:10px;align-items:flex-start;color:#e8f6ff;font-size:.9rem}.lab-point span{width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:#b9fff21c;color:#9ef5e8;flex-shrink:0;font-weight:800}
+    .quiz-card{border:1px solid var(--line);border-radius:24px;padding:27px;background:#fff;box-shadow:0 15px 40px rgba(14,43,77,.06);min-width:0}.quiz-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:20px}.quiz-top p{color:var(--muted);font-size:.9rem;margin-top:6px}.demo-label{display:inline-flex;align-items:center;gap:7px;border:1px solid #d7e9fb;background:#edf6ff;color:#1a65ac;border-radius:99px;padding:6px 10px;font-size:.72rem;font-weight:800;white-space:nowrap}.quiz-controls{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end}.field-label{display:block;font-size:.82rem;font-weight:800;color:#334b65;margin-bottom:7px}.quiz-select,.chat-input{width:100%;border:1px solid #d6e2ef;background:#fff;border-radius:12px;padding:13px 14px;font:inherit;color:var(--ink);outline:none}.quiz-select:focus,.chat-input:focus{border-color:#2877d5;box-shadow:0 0 0 3px #2877d51b}.quiz-stage{margin-top:22px;border-top:1px solid var(--line);padding-top:22px}.quiz-empty{border:1px dashed #cad9e9;background:#f8fbff;padding:24px;border-radius:16px;text-align:center;color:var(--muted)}.quiz-empty strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:5px}.question-meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:.8rem;margin-bottom:12px}.quiz-progress{height:7px;background:#e8eff7;border-radius:99px;overflow:hidden;margin-bottom:19px}.quiz-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#2877d5,#37d5d8);transition:width .25s}.question-title{font-size:1.08rem;line-height:1.45;margin-bottom:15px;font-weight:800;color:#132943}.answer-list{display:grid;gap:10px}.answer-option{display:flex;align-items:flex-start;gap:11px;border:1px solid #dfe8f2;border-radius:13px;padding:13px 14px;cursor:pointer;transition:border-color .15s,background .15s}.answer-option:hover{border-color:#92b8e5;background:#f8fbff}.answer-option:has(input:checked){border-color:#2877d5;background:#edf6ff}.answer-option input{margin-top:5px;accent-color:#2877d5;flex-shrink:0}.answer-option span{font-size:.92rem}.quiz-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px;flex-wrap:wrap}.quiz-feedback{font-size:.9rem;margin-top:13px;padding:12px 14px;border-radius:12px;background:#fff7e8;color:#83550d}.result-card{border-radius:18px;background:#f3fbf8;border:1px solid #cdeee4;padding:22px;text-align:center}.result-score{font:800 2.8rem Manrope,sans-serif;color:#117e70;line-height:1.2}.result-card p{color:#47677a;margin:8px auto 15px;max-width:440px;font-size:.92rem}.result-meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0 18px}.result-chip{background:#fff;border:1px solid #d5ece5;border-radius:99px;padding:6px 10px;font-size:.76rem;color:#327468;font-weight:700}
+    .ai-section{background:#fff}.ai-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center}.ai-intro .eyebrow{background:#e9f5ff;color:#1766ae;border-color:#d6eaff}.ai-intro h2{margin-bottom:15px}.ai-intro>p{color:var(--muted);font-size:1rem;margin-bottom:24px}.coach-features{display:grid;gap:15px}.coach-feature{display:flex;gap:12px;align-items:flex-start}.coach-feature-icon{width:40px;height:40px;display:grid;place-items:center;flex-shrink:0;background:#edf5ff;border-radius:12px;color:#236fca;font-size:1.1rem}.coach-feature strong{display:block;font-size:.95rem}.coach-feature p{font-size:.85rem;color:var(--muted);margin-top:3px}.chat-shell{border:1px solid #dce7f2;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px #0b234214;background:#fff;min-width:0}.chat-head{display:flex;align-items:center;gap:12px;background:#0b2342;color:#fff;padding:18px 20px}.bot-avatar{width:43px;height:43px;border-radius:14px;background:linear-gradient(145deg,#2074c8,#37d5d8);display:grid;place-items:center;color:white;font-size:1.35rem;font-weight:900;box-shadow:0 6px 18px #37d5d833}.chat-head strong{display:block;font-size:.98rem}.chat-head small{display:block;color:#c9deef;font-size:.76rem}.online-dot{width:8px;height:8px;display:inline-block;background:#68e6bc;border-radius:50%;margin-right:5px}.chat-demo-note{background:#eef6ff;color:#375c7f;font-size:.76rem;line-height:1.5;padding:10px 18px;border-bottom:1px solid #dce7f2}.chat-messages{height:300px;overflow-y:auto;padding:17px;background:#f8fbff;display:flex;flex-direction:column;gap:12px}.chat-message{max-width:88%;border-radius:15px;padding:11px 13px;font-size:.89rem;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}.chat-message.bot{align-self:flex-start;background:#fff;border:1px solid #e0e9f2;border-bottom-left-radius:5px;color:#263f59}.chat-message.user{align-self:flex-end;background:#1d70c8;color:#fff;border-bottom-right-radius:5px}.chat-chips{display:flex;flex-wrap:wrap;gap:7px;padding:12px 15px 0;background:#fff}.chat-chip{border:1px solid #d6e4f3;border-radius:99px;background:#fff;padding:7px 10px;color:#28639b;font:600 .77rem 'DM Sans',sans-serif;cursor:pointer}.chat-chip:hover{background:#edf6ff}.chat-compose{display:flex;gap:9px;padding:14px;background:#fff;border-top:1px solid #e7eef6}.chat-compose .chat-input{min-width:0;padding:12px}.chat-compose .btn{min-height:45px;padding:10px 14px}.chat-footnote{font-size:.72rem;color:#718399;padding:0 15px 14px;background:#fff}
+    .trust-note{max-width:850px;margin:18px auto 0;text-align:center;font-size:.8rem;color:#687d91}
+    @media(max-width:900px){.lab-grid,.ai-grid{grid-template-columns:1fr}.lab-intro{padding:25px}.ai-grid{gap:28px}}
+    @media(max-width:740px){.quiz-card{padding:20px}.quiz-controls{grid-template-columns:1fr}.quiz-controls .btn{width:100%}.quiz-top{flex-direction:column}.chat-messages{height:280px}.chat-compose{gap:7px}.chat-compose .btn{padding:9px 11px}.quiz-footer .btn{flex:1}.lab-intro h3{font-size:1.4rem}}
+
   </style>
 </head>
 <body>
@@ -37,7 +50,7 @@
         <span>SkillProof <span>AI</span></span>
       </a>
       <nav class="navlinks" id="navlinks" aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#skills">Explore Skills</a><a href="#talent">Hire Talent</a><a href="#how">How It Works</a>
+        <a href="#home">Home</a><a href="#skills">Explore Skills</a><a href="#talent">Hire Talent</a><a href="#skill-check">Skill Check</a><a href="#ai-coach">AI Coach</a><a href="#how">How It Works</a>
       </nav>
       <div class="nav-actions"><a class="btn btn-primary" href="#join">Get Started <span aria-hidden="true">→</span></a><button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button></div>
     </div>
@@ -90,12 +103,42 @@
       <article class="step"><div class="step-num">03</div><h3>Connect and collaborate</h3><p>Clients explore talent and freelancers discover opportunities to work together.</p></article>
     </div></div></section>
 
+
+    <section class="section lab-section" id="skill-check">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow" style="background:#edf5ff;color:#276bb8;border-color:#d9eaff"><span class="eyebrow-dot" style="background:#2877d5;box-shadow:none"></span> Skill Check Lab</div><h2>Show what you know.</h2><p>Try a short practice challenge in a skill you want to grow. Get an instant practice score and use it to decide what to learn next.</p></div>
+        <div class="lab-grid">
+          <aside class="lab-intro"><div class="eyebrow"><span class="eyebrow-dot"></span> Practice starts here</div><h3>Skills are stronger when you can demonstrate them.</h3><p>Choose a category, answer a few scenario-based questions, and review your result. We’ll expand the challenge library as the platform grows.</p><div class="lab-points"><div class="lab-point"><span>✓</span><div><strong>Quick practice</strong><br>Short questions with explanations.</div></div><div class="lab-point"><span>↗</span><div><strong>Useful feedback</strong><br>See which concepts to revise.</div></div><div class="lab-point"><span>◎</span><div><strong>Honest results</strong><br>Practice scores are not verified credentials.</div></div></div></aside>
+          <div class="quiz-card">
+            <div class="quiz-top"><div><h3>Choose your skill challenge</h3><p>Begin with one of our starter assessments.</p></div><span class="demo-label">● Interactive demo</span></div>
+            <div class="quiz-controls"><div><label class="field-label" for="quizCategory">Skill category</label><select class="quiz-select" id="quizCategory"><option value="web">Web Development</option><option value="design">Graphic Design</option><option value="video">Video Editing</option></select></div><button class="btn btn-primary" id="startQuiz" type="button">Start challenge →</button></div>
+            <div class="quiz-stage" id="quizStage" aria-live="polite"><div class="quiz-empty"><strong>Your skill check begins here</strong>Select a category and tap “Start challenge” to try the sample questions.</div></div>
+          </div>
+        </div>
+        <p class="trust-note">Important: this starter quiz is for practice and product testing only. Passing it does not issue a verified badge, certificate, or proof of professional ability.</p>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ai-coach">
+      <div class="container ai-grid">
+        <div class="ai-intro"><div class="eyebrow"><span class="eyebrow-dot" style="background:#2877d5;box-shadow:none"></span> AI Skill Coach</div><h2>A helpful guide for your next step.</h2><p>Ask about building a portfolio, choosing a skill challenge, or improving your freelancer profile. This is an interactive assistant preview using sample responses; live AI will be connected through a secure backend later.</p><div class="coach-features"><div class="coach-feature"><span class="coach-feature-icon">✦</span><div><strong>Practice guidance</strong><p>Get suggestions for what to practise next.</p></div></div><div class="coach-feature"><span class="coach-feature-icon">▧</span><div><strong>Portfolio tips</strong><p>Learn what useful project evidence can include.</p></div></div><div class="coach-feature"><span class="coach-feature-icon">🔒</span><div><strong>Built with security in mind</strong><p>Real AI keys will stay on a server, never in public page code.</p></div></div></div></div>
+        <div class="chat-shell" aria-label="SkillProof assistant preview">
+          <div class="chat-head"><div class="bot-avatar" aria-hidden="true">✦</div><div><strong>SkillProof Assistant</strong><small><span class="online-dot"></span> Preview mode · sample responses</small></div></div>
+          <div class="chat-demo-note">This demo does not send messages to an AI model. It shows the planned chat experience and offers a few built-in tips.</div>
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"><div class="chat-message bot">Hi! 👋 I’m the SkillProof assistant preview. Ask me about skill checks, portfolios, or how this platform is planned to work.</div></div>
+          <div class="chat-chips"><button class="chat-chip" type="button" data-prompt="How do I prove my skills?">How do I prove my skills?</button><button class="chat-chip" type="button" data-prompt="What should I put in my portfolio?">Portfolio tips</button><button class="chat-chip" type="button" data-prompt="How can I improve my profile?">Improve my profile</button></div>
+          <form class="chat-compose" id="chatForm"><label for="chatInput" class="field-label" style="position:absolute;left:-9999px">Message the assistant</label><input class="chat-input" id="chatInput" name="message" placeholder="Ask a question..." maxlength="400" autocomplete="off" required><button class="btn btn-primary" type="submit">Send ↑</button></form>
+          <div class="chat-footnote">Please don’t share passwords, payment details, private documents, or other sensitive information.</div>
+        </div>
+      </div>
+    </section>
+
     <section class="challenge"><div class="container"><div class="challenge-panel"><div><h2>Your work should tell your story.</h2><p>Build a profile around real projects, useful skills, and work you’re proud to show. SkillProof AI is being built step by step.</p></div><a href="#join" class="btn btn-light">Be part of the journey &nbsp; →</a></div></div></section>
 
-    <section class="join" id="join"><div class="container"><h2>Ready to make your skills count?</h2><p>Whether you’re looking for talent or building your freelance career, SkillProof AI is being designed with you in mind.</p><div class="join-actions"><a class="btn btn-primary signup-link" href="#join" data-role="client">I want to hire talent ↗</a><a class="btn btn-light signup-link" href="#join" data-role="freelancer">I’m a freelancer ↗</a></div><p style="font-size:.8rem;margin-top:17px">Early concept homepage · Account creation and marketplace features are not live yet.</p></div></section>
+    <section class="join" id="join"><div class="container"><h2>Ready to make your skills count?</h2><p>Whether you’re looking for talent or building your freelance career, SkillProof AI is being designed with you in mind.</p><div class="join-actions"><a class="btn btn-primary signup-link" href="#join" data-role="client">I want to hire talent ↗</a><a class="btn btn-light signup-link" href="#join" data-role="freelancer">I’m a freelancer ↗</a></div><p style="font-size:.8rem;margin-top:17px">Interactive skill-check demo and assistant preview · Accounts, live AI, and marketplace features are not live yet.</p></div></section>
   </main>
 
-  <footer><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5 26 7v7.7c0 6.1-4.2 10.9-10 13.8-5.8-2.9-10-7.7-10-13.8V7l10-3.5Z" stroke="#9BF7F0" stroke-width="2"/><path d="m10.5 15.8 3.5 3.5 7.5-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>SkillProof <span>AI</span></span></a><p>Skills you can prove. Talent you can trust. A work-in-progress concept built around evidence, skills, and opportunity.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#skills">Explore Skills</a><a href="#talent">Hire Talent</a><a href="#how">How It Works</a><a href="#join">Get Involved</a></nav></div><div class="footer-bottom"><span>© <span id="year">2026</span> SkillProof AI. All rights reserved.</span><span>Built step by step with care.</span></div></div></footer>
+  <footer><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5 26 7v7.7c0 6.1-4.2 10.9-10 13.8-5.8-2.9-10-7.7-10-13.8V7l10-3.5Z" stroke="#9BF7F0" stroke-width="2"/><path d="m10.5 15.8 3.5 3.5 7.5-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>SkillProof <span>AI</span></span></a><p>Skills you can prove. Talent you can trust. A work-in-progress concept built around evidence, skills, and opportunity.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#skills">Explore Skills</a><a href="#skill-check">Skill Check</a><a href="#ai-coach">AI Coach</a><a href="#how">How It Works</a><a href="#join">Get Involved</a></nav></div><div class="footer-bottom"><span>© <span id="year">2026</span> SkillProof AI. All rights reserved.</span><span>Built step by step with care.</span></div></div></footer>
   <div class="notice" id="notice" role="status" aria-live="polite"></div>
   <script>
     const toggle = document.getElementById('menuToggle');
@@ -118,6 +161,78 @@
       window.clearTimeout(window.skillProofNoticeTimer);
       window.skillProofNoticeTimer = window.setTimeout(() => notice.classList.remove('show'), 4200);
     }));
+
+
+    // Small interactive practice quizzes. These scores are educational only, not verified credentials.
+    const questionBank = {
+      web: [
+        {q:'Which HTML element is most appropriate for the main content unique to a page?',a:['<main>','<span>','<footer>','<meta>'],correct:0,why:'The <main> element identifies the primary content of a document.'},
+        {q:'What does CSS Flexbox primarily help you do?',a:['Store user passwords','Arrange items in a layout','Run database queries','Compress images'],correct:1,why:'Flexbox is a CSS layout model for arranging items along a row or column.'},
+        {q:'Which practice makes a website more usable on phones?',a:['Fixed 1200px width on every screen','Tiny text everywhere','Responsive layouts and viewport settings','Removing all spacing'],correct:2,why:'Responsive layouts adapt sizing and arrangement to different screen widths.'},
+        {q:'Why should a form input have a clear label?',a:['To improve clarity and accessibility','To make the website slower','To replace validation completely','To hide its purpose'],correct:0,why:'Labels help people understand each field and support assistive technologies.'}
+      ],
+      design: [
+        {q:'What is the main purpose of visual hierarchy in a design?',a:['Make every element equally loud','Guide attention to the most important information','Use as many fonts as possible','Hide the call to action'],correct:1,why:'Visual hierarchy uses size, contrast, spacing, and placement to guide attention.'},
+        {q:'A client needs a logo that works on a tiny app icon. What matters most?',a:['Lots of tiny detail','Legibility and simplicity at small sizes','Only a long slogan','Using five gradients'],correct:1,why:'Simple, recognisable shapes tend to remain clear at small sizes.'},
+        {q:'What is a good first step before designing a brand poster?',a:['Understand the audience and goal','Choose random effects','Ignore the required dimensions','Export before review'],correct:0,why:'Audience, message, and format inform the layout and visual choices.'},
+        {q:'Which choice generally improves text readability?',a:['Low contrast between text and background','Long lines with no spacing','Clear contrast and consistent type sizes','Decorative font for all paragraphs'],correct:2,why:'Readable contrast and a clear type scale make information easier to scan.'}
+      ],
+      video: [
+        {q:'What is the purpose of a timeline in video-editing software?',a:['Arrange clips and audio over time','Register a domain name','Draw vector logos only','Create an email inbox'],correct:0,why:'A timeline is used to arrange and time video, audio, titles, and effects.'},
+        {q:'For a short social video, what should you usually do first?',a:['Ignore the audience','Clarify the goal and target platform','Add every effect available','Export at random dimensions'],correct:1,why:'The purpose and platform help determine pacing, aspect ratio, and delivery.'},
+        {q:'The dialogue is difficult to hear under music. What is a sensible edit?',a:['Increase music even more','Lower the music and balance dialogue levels','Mute every audio track','Add more transitions'],correct:1,why:'Balancing levels helps dialogue remain clear while music supports the scene.'},
+        {q:'Why should you check an export before delivering it?',a:['To catch audio, timing, visual, or format issues','To guarantee a viral result','To avoid watching the video','To automatically create a contract'],correct:0,why:'Reviewing the export helps catch problems that may not be obvious on the timeline.'}
+      ]
+    };
+    const quizStage = document.getElementById('quizStage');
+    const quizCategory = document.getElementById('quizCategory');
+    const startQuiz = document.getElementById('startQuiz');
+    let quiz = {category:'web',index:0,answers:[],started:false,submitted:false};
+    const categoryNames = {web:'Web Development',design:'Graphic Design',video:'Video Editing'};
+    function startPractice(){quiz={category:quizCategory.value,index:0,answers:[],started:true,submitted:false};renderQuestion();}
+    function renderQuestion(){
+      const list=questionBank[quiz.category]; const q=list[quiz.index];
+      quizStage.innerHTML=`<div class="question-meta"><span>Question ${quiz.index+1} of ${list.length}</span><span>${categoryNames[quiz.category]}</span></div><div class="quiz-progress"><span style="width:${((quiz.index)/list.length)*100}%"></span></div><div class="question-title">${q.q.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}</div><div class="answer-list">${q.a.map((answer,i)=>`<label class="answer-option"><input type="radio" name="quizAnswer" value="${i}" ${quiz.answers[quiz.index]===i?'checked':''}><span>${answer.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}</span></label>`).join('')}</div><div id="quizFeedback"></div><div class="quiz-footer"><button class="btn btn-light" id="quizRestart" type="button">Start over</button><button class="btn btn-primary" id="quizNext" type="button">${quiz.index===list.length-1?'See my result':'Next question →'}</button></div>`;
+      document.getElementById('quizRestart').addEventListener('click',startPractice);
+      document.getElementById('quizNext').addEventListener('click',advanceQuestion);
+    }
+    function advanceQuestion(){
+      const chosen=quizStage.querySelector('input[name="quizAnswer"]:checked');
+      if(!chosen){const fb=document.getElementById('quizFeedback');fb.className='quiz-feedback';fb.textContent='Please choose an answer first.';return;}
+      quiz.answers[quiz.index]=Number(chosen.value);
+      const list=questionBank[quiz.category];
+      if(quiz.index<list.length-1){quiz.index++;renderQuestion();}else{renderResult();}
+    }
+    function renderResult(){
+      const list=questionBank[quiz.category];const correct=quiz.answers.reduce((sum,answer,i)=>sum+(answer===list[i].correct?1:0),0);const percent=Math.round(correct/list.length*100);
+      const nextTip=percent===100?'Excellent practice round. Try a real project and document your process.':percent>=50?'Good start. Review the explanations and try another round to reinforce the basics.':'Keep learning. Review each explanation, practise one topic, and try again.';
+      quizStage.innerHTML=`<div class="result-card"><div class="demo-label">Practice result · not verified</div><div class="result-score" style="margin-top:12px">${percent}%</div><h3>${correct} out of ${list.length} correct</h3><p>${nextTip}</p><div class="result-meta"><span class="result-chip">${categoryNames[quiz.category]}</span><span class="result-chip">Sample quiz</span></div><button class="btn btn-primary" id="reviewQuiz" type="button">Review answers</button> <button class="btn btn-light" id="retryQuiz" type="button">Try again ↻</button></div>`;
+      document.getElementById('reviewQuiz').addEventListener('click',renderReview);
+      document.getElementById('retryQuiz').addEventListener('click',startPractice);
+    }
+    function renderReview(){
+      const list=questionBank[quiz.category];
+      quizStage.innerHTML=`<div class="question-meta"><span>Review your answers</span><span>${categoryNames[quiz.category]}</span></div>`+list.map((q,i)=>{const ok=quiz.answers[i]===q.correct;return `<div style="padding:14px 0;border-bottom:1px solid var(--line)"><strong style="display:block;margin-bottom:6px">${i+1}. ${q.q.replaceAll('<','&lt;').replaceAll('>','&gt;')}</strong><div style="font-size:.88rem;color:${ok?'#117e70':'#9a5e14'};font-weight:700">${ok?'Correct':'Your answer: '+(q.a[quiz.answers[i]]||'No answer selected')}</div><div style="font-size:.88rem;color:var(--muted);margin-top:5px">Correct answer: ${q.a[q.correct].replaceAll('<','&lt;').replaceAll('>','&gt;')}. ${q.why}</div></div>`}).join('')+`<div class="quiz-footer"><button class="btn btn-light" id="reviewBack" type="button">Back to result</button><button class="btn btn-primary" id="reviewRetry" type="button">Try again ↻</button></div>`;
+      document.getElementById('reviewBack').addEventListener('click',renderResult);document.getElementById('reviewRetry').addEventListener('click',startPractice);
+    }
+    startQuiz.addEventListener('click',startPractice);
+
+    // Local assistant preview: fixed guidance, not a live generative AI model.
+    const chatForm=document.getElementById('chatForm');const chatInput=document.getElementById('chatInput');const chatMessages=document.getElementById('chatMessages');
+    function addChatMessage(text,role){const msg=document.createElement('div');msg.className='chat-message '+role;msg.textContent=text;chatMessages.appendChild(msg);chatMessages.scrollTop=chatMessages.scrollHeight;}
+    function coachReply(question){const q=question.toLowerCase();
+      if(/skill|test|challenge|check|quiz|prove/.test(q))return 'Start in the Skill Check Lab, choose Web Development, Graphic Design, or Video Editing, and answer the practice questions. You will see a practice score and explanations. This demo score is not a verified badge or certificate.';
+      if(/portfolio|project|sample|work sample/.test(q))return 'A useful portfolio can include 2–4 relevant projects, your role, the problem you solved, tools used, screenshots or links, and a short explanation of your process. Only show work you have permission to share.';
+      if(/profile|bio|about|improve/.test(q))return 'Make your profile clear and specific: choose a focused skill, write a short honest introduction, add your strongest samples, describe your role in each project, and keep contact details and availability up to date.';
+      if(/client|hire|freelanc|order|job|work/.test(q))return 'The planned marketplace will help clients compare portfolios and challenge evidence, while freelancers can present their skills and discover projects. Accounts, messaging, orders, and payments are not live yet.';
+      if(/ai|chatbot|assistant|real/.test(q))return 'This is the assistant interface preview with built-in sample replies, not a live AI model yet. To activate real AI safely, we need a backend endpoint so a secret API key is never exposed in public website code.';
+      if(/hello|hi\b|salam|hey/.test(q))return 'Hello! 👋 I can share starter tips about skill checks, portfolios, profiles, and the planned marketplace. What would you like to work on?';
+      if(/security|password|private|safe|data/.test(q))return 'Never share your password or payment details in chat. Before real accounts launch, we should add secure authentication, database access rules, input validation, and a privacy notice.';
+      return 'I can help with a few starter topics: skill challenges, portfolio tips, profile improvements, the marketplace plan, or what is needed to activate live AI. Try asking about one of those topics.';
+    }
+    chatForm.addEventListener('submit',event=>{event.preventDefault();const question=chatInput.value.trim();if(!question)return;addChatMessage(question,'user');chatInput.value='';window.setTimeout(()=>addChatMessage(coachReply(question),'bot'),180);});
+    document.querySelectorAll('.chat-chip').forEach(btn=>btn.addEventListener('click',()=>{const prompt=btn.dataset.prompt;addChatMessage(prompt,'user');window.setTimeout(()=>addChatMessage(coachReply(prompt),'bot'),180);}));
+
   </script>
 </body>
 </html>
