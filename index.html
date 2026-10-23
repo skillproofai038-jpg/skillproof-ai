@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b2342">
-  <meta name="description" content="SkillProof AI helps clients discover talent and freelancers practise skills through interactive starter challenges, portfolios, and an AI assistant preview.">
+  <meta name="description" content="SkillProof AI helps clients discover talent and freelancers build evidence through profiles, portfolios, and practical skill challenges.">
   <title>SkillProof AI — Skills You Can Prove</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,19 @@
     .notice{display:none;position:fixed;z-index:50;left:50%;bottom:22px;transform:translateX(-50%);width:min(440px,calc(100% - 28px));padding:15px 18px;background:#0b2342;color:white;border:1px solid #2b648e;border-radius:14px;box-shadow:var(--shadow);font-size:.9rem}.notice.show{display:block}
     @media(max-width:900px){.navlinks{gap:16px}.hero-grid{grid-template-columns:1fr .8fr;gap:20px}.visual-photo{width:90%}.why-grid{gap:34px}.challenge-panel{padding:36px}.hero{min-height:550px}}
     @media(max-width:740px){.container{width:min(100% - 30px,560px)}.nav{min-height:69px}.brand{font-size:1rem}.brand-mark{width:38px;height:38px}.nav-actions>.btn{display:none}.menu-toggle{display:grid;place-items:center}.navlinks{display:none;position:absolute;top:69px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:17px 22px 22px;box-shadow:0 18px 30px #142f4b16;align-items:stretch;gap:0}.navlinks.open{display:flex;flex-direction:column}.navlinks a{padding:12px 0;border-bottom:1px solid #edf1f6}.navlinks a:last-child{border:0}.hero-grid{grid-template-columns:1fr;padding:68px 0 45px;gap:16px}.hero{min-height:auto}.hero-copy{font-size:1rem}.hero-visual{min-height:290px;width:100%;max-width:430px;margin:0 auto}.visual-photo{width:82%;height:245px;right:3%;top:10px}.proof-card{bottom:3px;left:2%;padding:14px}.trust-inner{gap:15px 23px;padding:20px 0}.trust-item{font-size:.79rem}.section{padding:67px 0}.section-head{margin-bottom:30px}.skill-grid{grid-template-columns:1fr;gap:16px}.skill-image{height:205px}.skill-body{padding:18px}.why-grid{grid-template-columns:1fr;gap:32px}.why-image{min-height:320px}.steps{grid-template-columns:1fr;gap:14px}.step{padding:22px}.challenge{padding:0 0 65px}.challenge-panel{grid-template-columns:1fr;padding:30px 24px;gap:22px}.challenge-panel .btn{justify-self:start}.join{padding:60px 0}.footer-top{flex-direction:column}.footer-links{gap:15px 20px}}
+
+    /* Supabase account modal */
+    [hidden]{display:none!important}.auth-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(5,20,39,.68);backdrop-filter:blur(7px);padding:18px;overflow-y:auto;align-items:center;justify-content:center}
+    .auth-overlay.open{display:flex}.auth-dialog{position:relative;width:min(100%,470px);max-height:calc(100vh - 36px);overflow-y:auto;background:#fff;border:1px solid #dce8f4;border-radius:24px;padding:28px;box-shadow:0 30px 100px #00132766}
+    .auth-close{position:absolute;top:13px;right:14px;width:39px;height:39px;border:1px solid #e1eaf3;border-radius:12px;background:#fff;color:#23415e;font-size:1.45rem;cursor:pointer}
+    .auth-kicker{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;color:#176bb8;background:#edf7ff;border-radius:99px;padding:7px 10px;margin-bottom:15px}
+    .auth-dialog h2{font-size:clamp(1.7rem,5vw,2.15rem);padding-right:28px}.auth-subtitle{color:var(--muted);font-size:.91rem;margin:10px 0 22px}
+    .auth-field{display:block;margin:13px 0}.auth-field span{display:block;font-size:.82rem;font-weight:800;color:#334b65;margin-bottom:6px}
+    .auth-field input,.auth-field select{width:100%;padding:13px 14px;border:1px solid #d6e2ef;border-radius:12px;background:#fff;font:inherit;color:var(--ink);outline:none}
+    .auth-field input:focus,.auth-field select:focus{border-color:#2877d5;box-shadow:0 0 0 3px #2877d51b}
+    .auth-submit{width:100%;margin-top:8px}.auth-status{display:none;border-radius:12px;padding:11px 13px;margin:14px 0 0;font-size:.86rem;overflow-wrap:anywhere}.auth-status.show{display:block}.auth-status.error{background:#fff0ef;color:#a12b24;border:1px solid #ffd5d1}.auth-status.success{background:#edfbf6;color:#126a53;border:1px solid #c8f0e3}.auth-switch{font-size:.86rem;color:var(--muted);text-align:center;margin-top:18px}.auth-switch button{border:0;padding:4px;background:transparent;color:#176bb8;font:inherit;font-weight:800;cursor:pointer}.auth-session{padding:17px;border:1px solid #d5eee6;border-radius:16px;background:#f0fbf6;margin-top:18px}.auth-session p{font-size:.9rem;color:#355c52;overflow-wrap:anywhere;margin:7px 0 15px}.auth-session strong{color:#155a49}.auth-smallprint{font-size:.74rem!important;color:#75879a!important;margin-top:14px!important;text-align:center}
+    @media(max-width:480px){.auth-overlay{padding:10px}.auth-dialog{padding:22px 18px;border-radius:20px;max-height:calc(100vh - 20px)}}
+
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
     /* Skill Check Lab and AI Coach additions */
@@ -52,7 +65,7 @@
       <nav class="navlinks" id="navlinks" aria-label="Main navigation">
         <a href="#home">Home</a><a href="#skills">Explore Skills</a><a href="#talent">Hire Talent</a><a href="#skill-check">Skill Check</a><a href="#ai-coach">AI Coach</a><a href="#how">How It Works</a>
       </nav>
-      <div class="nav-actions"><a class="btn btn-primary" href="#join">Get Started <span aria-hidden="true">→</span></a><button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button></div>
+      <div class="nav-actions"><button class="btn btn-light" type="button" id="navLogin">Log in</button><button class="btn btn-primary" type="button" id="navSignup">Get Started <span aria-hidden="true">→</span></button><button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button></div>
     </div>
   </header>
 
@@ -135,12 +148,43 @@
 
     <section class="challenge"><div class="container"><div class="challenge-panel"><div><h2>Your work should tell your story.</h2><p>Build a profile around real projects, useful skills, and work you’re proud to show. SkillProof AI is being built step by step.</p></div><a href="#join" class="btn btn-light">Be part of the journey &nbsp; →</a></div></div></section>
 
-    <section class="join" id="join"><div class="container"><h2>Ready to make your skills count?</h2><p>Whether you’re looking for talent or building your freelance career, SkillProof AI is being designed with you in mind.</p><div class="join-actions"><a class="btn btn-primary signup-link" href="#join" data-role="client">I want to hire talent ↗</a><a class="btn btn-light signup-link" href="#join" data-role="freelancer">I’m a freelancer ↗</a></div><p style="font-size:.8rem;margin-top:17px">Interactive skill-check demo and assistant preview · Accounts, live AI, and marketplace features are not live yet.</p></div></section>
+    <section class="join" id="join"><div class="container"><h2>Ready to make your skills count?</h2><p>Whether you’re looking for talent or building your freelance career, SkillProof AI is being designed with you in mind.</p><div class="join-actions"><a class="btn btn-primary signup-link" href="#join" data-role="client">I want to hire talent ↗</a><a class="btn btn-light signup-link" href="#join" data-role="freelancer">I’m a freelancer ↗</a></div><p style="font-size:.8rem;margin-top:17px">Create an account to begin · Skill checks are practice only; live AI, orders, and payments will be added in later steps.</p></div></section>
   </main>
 
   <footer><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5 26 7v7.7c0 6.1-4.2 10.9-10 13.8-5.8-2.9-10-7.7-10-13.8V7l10-3.5Z" stroke="#9BF7F0" stroke-width="2"/><path d="m10.5 15.8 3.5 3.5 7.5-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>SkillProof <span>AI</span></span></a><p>Skills you can prove. Talent you can trust. A work-in-progress concept built around evidence, skills, and opportunity.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#skills">Explore Skills</a><a href="#skill-check">Skill Check</a><a href="#ai-coach">AI Coach</a><a href="#how">How It Works</a><a href="#join">Get Involved</a></nav></div><div class="footer-bottom"><span>© <span id="year">2026</span> SkillProof AI. All rights reserved.</span><span>Built step by step with care.</span></div></div></footer>
   <div class="notice" id="notice" role="status" aria-live="polite"></div>
+  <div class="auth-overlay" id="authOverlay" aria-hidden="true">
+    <section class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="auth-close" id="authClose" type="button" aria-label="Close account window">×</button>
+      <div class="auth-kicker">🛡️ SkillProof AI account</div>
+      <h2 id="authTitle">Create your account</h2>
+      <p class="auth-subtitle" id="authSubtitle">Join as a client, freelancer, or both.</p>
+      <form id="authForm">
+        <label class="auth-field" id="authNameWrap"><span>Your display name</span><input id="authName" name="display_name" type="text" minlength="2" maxlength="70" autocomplete="name" placeholder="e.g. Ali Khan" required></label>
+        <label class="auth-field" id="authRoleWrap"><span>How will you use SkillProof AI?</span><select id="authRole" name="role"><option value="freelancer">I want to find work (Freelancer)</option><option value="client">I want to hire talent (Client)</option><option value="both">Both hire and find work</option></select></label>
+        <label class="auth-field"><span>Email address</span><input id="authEmail" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required></label>
+        <label class="auth-field"><span>Password</span><input id="authPassword" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required></label>
+        <button class="btn btn-primary auth-submit" id="authSubmit" type="submit">Create account</button>
+        <div class="auth-status" id="authStatus" role="status" aria-live="polite"></div>
+      </form>
+      <div class="auth-session" id="authSession" hidden>
+        <strong>You’re signed in</strong>
+        <p id="authSessionText"></p>
+        <button class="btn btn-light" type="button" id="authSignOut">Sign out</button>
+      </div>
+      <p class="auth-switch" id="authSwitch">Already have an account? <button type="button" id="authSwitchButton">Log in</button></p>
+      <p class="auth-smallprint">Never share your password with anyone. Your account profile is stored in SkillProof AI’s Supabase database.</p>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
+    // Browser-safe Supabase configuration. Paste only your Publishable key (sb_publishable_...), never a Secret key.
+    const SUPABASE_URL = 'https://xxfurrlfxklziafbdgor.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE';
+    const supabaseClient = (window.supabase && SUPABASE_PUBLISHABLE_KEY !== 'PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE' && !SUPABASE_PUBLISHABLE_KEY.startsWith('sb_secret_'))
+      ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
+      : null;
+
     const toggle = document.getElementById('menuToggle');
     const nav = document.getElementById('navlinks');
     toggle.addEventListener('click', () => {
@@ -154,13 +198,155 @@
     }));
     document.getElementById('year').textContent = new Date().getFullYear();
     const notice = document.getElementById('notice');
-    document.querySelectorAll('.signup-link').forEach(link => link.addEventListener('click', event => {
-      event.preventDefault();
-      notice.textContent = 'Thanks for your interest! Real sign-up is not live yet. We will connect accounts and the database in a later step.';
+    const authOverlay = document.getElementById('authOverlay');
+    const authForm = document.getElementById('authForm');
+    const authTitle = document.getElementById('authTitle');
+    const authSubtitle = document.getElementById('authSubtitle');
+    const authNameWrap = document.getElementById('authNameWrap');
+    const authRoleWrap = document.getElementById('authRoleWrap');
+    const authName = document.getElementById('authName');
+    const authRole = document.getElementById('authRole');
+    const authEmail = document.getElementById('authEmail');
+    const authPassword = document.getElementById('authPassword');
+    const authSubmit = document.getElementById('authSubmit');
+    const authStatus = document.getElementById('authStatus');
+    const authSwitch = document.getElementById('authSwitch');
+    const authSwitchButton = document.getElementById('authSwitchButton');
+    const authSession = document.getElementById('authSession');
+    const authSessionText = document.getElementById('authSessionText');
+    const navLogin = document.getElementById('navLogin');
+    const navSignup = document.getElementById('navSignup');
+    let authMode = 'signup';
+    let currentSession = null;
+
+    function authMessage(message, kind='success') {
+      authStatus.textContent = message;
+      authStatus.className = 'auth-status show ' + kind;
+    }
+    function setAuthMode(mode) {
+      authMode = mode;
+      authTitle.textContent = mode === 'signup' ? 'Create your account' : 'Welcome back';
+      authSubtitle.textContent = mode === 'signup' ? 'Join as a client, freelancer, or both.' : 'Log in to your SkillProof AI account.';
+      authNameWrap.hidden = mode !== 'signup';
+      authRoleWrap.hidden = mode !== 'signup';
+      authName.required = mode === 'signup';
+      authPassword.autocomplete = mode === 'signup' ? 'new-password' : 'current-password';
+      authPassword.placeholder = mode === 'signup' ? 'At least 8 characters' : 'Your password';
+      authPassword.minLength = mode === 'signup' ? 8 : 1;
+      authSubmit.textContent = mode === 'signup' ? 'Create account' : 'Log in';
+      authSwitch.innerHTML = mode === 'signup'
+        ? 'Already have an account? <button type="button" id="authSwitchButton">Log in</button>'
+        : 'New to SkillProof AI? <button type="button" id="authSwitchButton">Create account</button>';
+      document.getElementById('authSwitchButton').addEventListener('click', () => setAuthMode(authMode === 'signup' ? 'login' : 'signup'));
+      authStatus.className = 'auth-status';
+      authStatus.textContent = '';
+    }
+    function openAuthModal(role='freelancer', mode='signup') {
+      authOverlay.classList.add('open');
+      authOverlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setAuthMode(mode);
+      authRole.value = ['client','freelancer','both'].includes(role) ? role : 'freelancer';
+      if (currentSession) renderSessionState(currentSession);
+      else { authForm.hidden = false; authSession.hidden = true; authSwitch.hidden = false; }
+      setTimeout(() => (currentSession ? document.getElementById('authClose') : authEmail).focus(), 50);
+    }
+    function closeAuthModal() {
+      authOverlay.classList.remove('open');
+      authOverlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    function renderSessionState(session) {
+      currentSession = session;
+      if (session) {
+        authForm.hidden = true;
+        authSession.hidden = false;
+        authSwitch.hidden = true;
+        authSessionText.textContent = 'Signed in as ' + (session.user.email || 'your SkillProof AI account') + '.';
+        navLogin.textContent = 'Account';
+        navSignup.textContent = 'Sign out';
+      } else {
+        authForm.hidden = false;
+        authSession.hidden = true;
+        authSwitch.hidden = false;
+        navLogin.textContent = 'Log in';
+        navSignup.innerHTML = 'Get Started <span aria-hidden="true">→</span>';
+      }
+    }
+    async function signOutUser() {
+      if (!supabaseClient) { openAuthModal('freelancer','login'); authMessage('First add your Supabase Publishable key to the website file.','error'); return; }
+      const { error } = await supabaseClient.auth.signOut();
+      if (error) authMessage(error.message, 'error');
+      else { closeAuthModal(); showNotice('You have signed out.'); }
+    }
+    function showNotice(message) {
+      notice.textContent = message;
       notice.classList.add('show');
       window.clearTimeout(window.skillProofNoticeTimer);
       window.skillProofNoticeTimer = window.setTimeout(() => notice.classList.remove('show'), 4200);
+    }
+
+    document.querySelectorAll('.signup-link').forEach(link => link.addEventListener('click', event => {
+      event.preventDefault();
+      openAuthModal(link.dataset.role || 'freelancer', 'signup');
     }));
+    navLogin.addEventListener('click', () => openAuthModal(currentSession ? 'freelancer' : 'freelancer', 'login'));
+    navSignup.addEventListener('click', () => currentSession ? signOutUser() : openAuthModal('freelancer','signup'));
+    document.getElementById('authClose').addEventListener('click', closeAuthModal);
+    authOverlay.addEventListener('click', event => { if (event.target === authOverlay) closeAuthModal(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && authOverlay.classList.contains('open')) closeAuthModal(); });
+    document.getElementById('authSignOut').addEventListener('click', signOutUser);
+    authForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!supabaseClient) {
+        authMessage('Setup is nearly ready. Add your Supabase Publishable key (starts with sb_publishable_) near the top of this file, then upload the updated file. Never paste a Secret key here.', 'error');
+        return;
+      }
+      const email = authEmail.value.trim();
+      const password = authPassword.value;
+      authSubmit.disabled = true;
+      authSubmit.textContent = authMode === 'signup' ? 'Creating account…' : 'Logging in…';
+      authStatus.className = 'auth-status';
+      try {
+        if (authMode === 'signup') {
+          const displayName = authName.value.trim();
+          if (displayName.length < 2) throw new Error('Please enter a display name with at least 2 characters.');
+          const { data, error } = await supabaseClient.auth.signUp({
+            email, password,
+            options: {
+              data: { display_name: displayName, role: authRole.value },
+              emailRedirectTo: window.location.href.split('#')[0]
+            }
+          });
+          if (error) throw error;
+          if (data.session) {
+            renderSessionState(data.session);
+            authMessage('Account created successfully. You are now signed in.', 'success');
+          } else {
+            authMessage('Account request received. Check your email for the confirmation link, then return here to log in.', 'success');
+          }
+        } else {
+          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+          if (error) throw error;
+          renderSessionState(data.session);
+          authMessage('You are logged in successfully.', 'success');
+        }
+      } catch (error) {
+        authMessage(error.message || 'Something went wrong. Please try again.', 'error');
+      } finally {
+        authSubmit.disabled = false;
+        authSubmit.textContent = authMode === 'signup' ? 'Create account' : 'Log in';
+      }
+    });
+    if (supabaseClient) {
+      supabaseClient.auth.getSession().then(({ data, error }) => {
+        if (error) console.warn('Could not restore Supabase session:', error.message);
+        renderSessionState(data?.session || null);
+      });
+      supabaseClient.auth.onAuthStateChange((_event, session) => renderSessionState(session));
+    } else {
+      renderSessionState(null);
+    }
 
 
     // Small interactive practice quizzes. These scores are educational only, not verified credentials.
